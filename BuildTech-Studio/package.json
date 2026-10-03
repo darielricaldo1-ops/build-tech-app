@@ -1,0 +1,53 @@
+{
+  "name": "buildtech-studio-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BuildTech Studio desktop client — connection setup preview",
+  "author": "BuildTech",
+  "license": "UNLICENSED",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.cjs",
+    "package": "electron-builder --win portable --x64"
+  },
+  "build": {
+    "appId": "com.buildtech.studio",
+    "productName": "BuildTech Studio",
+    "asar": true,
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "connection.cjs",
+      "setup.html",
+      "setup.css",
+      "setup.js",
+      "assets/**",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": false,
+      "artifactName": "BuildTech-Studio-Setup-Preview-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "BuildTech-Studio-Desktop-Preview-${version}.exe",
+      "requestExecutionLevel": "user"
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  }
+}
