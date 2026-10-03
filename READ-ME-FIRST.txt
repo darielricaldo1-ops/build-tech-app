@@ -1,0 +1,35 @@
+BUILDTECH STUDIO - LOCAL EDITION 1.0.0
+
+1. Extract the entire ZIP with Extract All.
+2. Open Windows.
+3. Run BuildTech-Studio-1.0.0-Windows-x64.exe.
+4. Start with Business settings.
+5. Make a backup from Backups & storage.
+
+The Windows x64 app needs no login, hosting account, Node.js installation,
+or separate database. No hosting service is configured.
+
+Source contains the complete project, compiled local server and website,
+assets, migrations, tests, dependency lock, build scripts and documentation.
+For browser mode on another system, use Node.js 24 or newer and run:
+    cd Source
+    node dist/server.cjs
+Open the private launch URL printed in the terminal.
+
+Read Source/README.md for complete instructions.
+Read Source/docs/VERIFICATION.md for the tests and platform limitations.
+SHA256SUMS.txt lists SHA-256 hashes for every supplied file.
+
+The Windows executable is unsigned and was built from Linux. It has not
+been run on Windows in this environment. Data and file workflows passed
+in Node and Electron's Node runtime; interface and PDF checks passed in
+Chromium. Native Windows launch and dialogs remain system acceptance checks.
+
+Workspace location:
+    %APPDATA%\BuildTech Studio Local\workspace
+
+Website edits affect the bundled local website, not any online website.
+The business database starts empty. No hosted customer data is imported.
+Email delivery, payments, posting and cloud hosting are not connected.
+
+Keep the complete backup folder together when moving to another computer.
